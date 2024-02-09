@@ -24,10 +24,11 @@ public class StudentController {
         return service.getAllStudents();
     }
 
-//    @PostMapping (value = "/addStudent")
-//    public String addStudent(@RequestBody StudentModel studentModel) {
-//
-//    }
+    @PostMapping(value = "/addMany")
+    public String addManyStudents(List<StudentModel> studentModels) {
+        service.addManyStudents(studentModels);
+        return "Added " + studentModels.size() + " students";
+    }
 
     @PostMapping(value = "/addStudent")
     public String addStudent(@RequestBody StudentModel studentModel) {

@@ -25,7 +25,6 @@ public class StudentService {
         if (repo.findById(usn).isPresent())
             return repo.findById(usn).get();
         return new StudentModel();
-//        return repo.getReferenceById(usn);
     }
 
     public void addManyStudents(List<StudentModel> studentModels) {
